@@ -1,0 +1,113 @@
+.panel {
+  display: flex;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 53px;
+  border-radius: var(--borderRadius);
+  height: 75vh;
+  width: 80vw;
+  position: relative;
+  transition: all 0.25s;
+}
+
+.panelLogo{
+  position: absolute;
+  top: -57px;
+  left: -25px;
+  transition: all 1s;
+}
+
+ .panelInfo {
+  background: var(--gradientBlue);
+  border-top-left-radius: var(--borderRadius) !important;
+  border-bottom-left-radius: var(--borderRadius) !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  padding-bottom: 25px;
+  flex-grow: 1;
+ }
+
+ .panelInfo h3 {
+  color: white;
+  font-size: 25px;
+ }
+
+ .panelInfo h5 {
+   color: white;
+   font-size: 13px;
+   text-align: center;
+  }
+  
+  .panelContent h3 {
+   color: var(--textColor);
+   font-size: 50px;
+   text-align: center;
+  }
+
+ .panelContent {
+  flex-grow: 10;
+ }
+
+@media (max-width: 800px) {
+  .panel {
+    flex-direction: column;
+    height: 90vh;
+    width: 90vw;
+  }
+
+  .panelLogo {
+    height: 50px;
+    width: 80px;
+    top: -19px;
+    left: -10px;
+  }
+
+  .panelInfo {
+    border-top-left-radius: var(--borderRadius) !important;
+    border-top-right-radius: var(--borderRadius) !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px;
+    padding-block: 20px;
+  }
+
+  .panelContent {
+    padding-block: 20px;
+  }
+
+  .panelInfo {
+    border-top-left-radius: var(--borderRadius) !important;
+    border-top-right-radius: var(--borderRadius) !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+  }
+
+}
+
+@media (max-height: 500px) {
+  .panelContent {
+    overflow: hidden;
+  }
+}
+
+@media (max-device-width: 480px) and (orientation: landscape) {
+  .panel{
+    flex-direction: row;
+    height: 70vh;
+    top: -20px;
+  }
+  
+}
+
+@media (max-device-width: 480px) and (orientation: portrait) {
+  .panel {
+    flex-direction: column;
+    height: 80vh;
+    top: -40px;
+  }
+  
+  .panelInfo {
+    border-top-left-radius: var(--borderRadius) !important;
+    border-top-right-radius: var(--borderRadius) !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+  }
+}

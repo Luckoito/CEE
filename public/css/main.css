@@ -1,0 +1,92 @@
+:root {
+
+    --primaryColor: #f78b20;
+    --secondaryColor: #005594;
+    --tertiaryColor: #f6bf86;
+    --textColor: #003053;
+    --brightBlue: #02adeb;
+    --gradientBlue: linear-gradient(140deg, rgba(0,70,121,1) 0%, rgba(0,85,148,1) 30%, rgba(2,173,235,1) 100%);
+    --gradientBluer: linear-gradient(175deg, rgba(0,70,121,1) 0%, rgba(0,85,148,1) 24%, rgba(2,173,235,1) 81%);
+    --gradientOrangeToBlue: linear-gradient(90deg, rgba(247,139,32,1) 0%, rgba(191,244,255,1) 70%);
+  
+    --borderRadius: 8px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  *::selection {
+    background: var(--tertiaryColor);
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .flexRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flexColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .space-between {
+    justify-content: space-between;
+  }
+  
+  .space-around {
+    justify-content: space-around;
+  }
+
+  .linkText {
+    color: var(--secondaryColor);
+    cursor: pointer;
+    transition: all 0.1s linear;
+  }
+  
+  .linkText:hover {
+    color: var(--primaryColor);
+  }
+  
+  input {
+    text-align: center;
+    color: var(--textColor);
+    border-radius: 5px;
+    border: solid rgba(149, 157, 165, 0.2) 2px;
+    transition: all 0.2s;
+    outline: none;
+    caret-color: var(--secondaryColor);
+  }
+  
+  input:hover{
+    border-color: var(--tertiaryColor);
+  }
+  
+  input:focus {
+    border-color: var(--primaryColor);
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--textColor);
+    outline: none;
+    transition: all .3s;
+  }
+
+  a:hover, a:focus {
+    color: var(--primaryColor);
+  }
+
