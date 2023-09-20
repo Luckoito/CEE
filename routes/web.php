@@ -14,8 +14,8 @@ use App\Http\Controllers\Auth\RegisterController;
 |
 */
 
-Route::view('/','login')->name('login');
-Route::view('/loginHelp','loginHelp')->name('loginHelp');
+Route::view('/','pages/login')->name('login');
+Route::view('/loginHelp','pages/loginHelp')->name('loginHelp');
 
-Route::get('/novoUsuario',[RegisterController::class, 'create'])->name('novoUsuario');
-Route::post('/novoUsuario', [RegisterController::class, 'store']);
+Route::get('/newUser',[RegisterController::class, 'create'])->name('newUser');
+Route::post('/newUser  ', [RegisterController::class, 'store']);

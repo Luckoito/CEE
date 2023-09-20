@@ -22,7 +22,7 @@ class RegisterController extends Controller
      */
     public function create()
     {
-        return view('novoUsuario');
+        return view('pages.newUser');
     }
 
     /**
@@ -42,7 +42,7 @@ class RegisterController extends Controller
             'password'=>Hash::make($request->senha),
         ]);
 
-                
+                        
     }
 
     /**
