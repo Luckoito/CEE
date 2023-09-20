@@ -16,6 +16,7 @@ use App\Http\Controllers\Auth\RegisterController;
 
 Route::view('/','pages/login')->name('login');
 Route::view('/loginHelp','pages/loginHelp')->name('loginHelp');
+Route::view('/testNotify','components/toast')->name('loginHelp');
 
 Route::get('/newUser',[RegisterController::class, 'create'])->name('newUser');
-Route::post('/newUser  ', [RegisterController::class, 'store']);
+Route::post('/newUser/store', [RegisterController::class, 'store'])->name('newUserStore');

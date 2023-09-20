@@ -31,18 +31,19 @@ class RegisterController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nome'=>'required',
+            'name'=>'required',
             'email'=>'required|email|unique:users',
             'password'=>'required|min:7',
         ]);
 
         $user = User::create([
-            'name'=>$request->nome,
+            'name'=>$request->name,
             'email'=>$request->email,
-            'password'=>Hash::make($request->senha),
+            'password'=>Hash::make($request->password),
         ]);
 
-                        
+        $notify = ['type'=>'1', 'title'=>'Sucesso! 😁', 'text'=>'O cadastro foi realizado com sucesso!'];
+        return view('pages/login', compact('notify'));
     }
 
     /**
