@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\SessionController;
+use App\Actions\Fortify\CreateNewUser;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +18,11 @@ use App\Http\Controllers\Auth\RegisterController;
 
 Route::view('/','pages/login')->name('login');
 Route::view('/loginHelp','pages/loginHelp')->name('loginHelp');
-Route::view('/testNotify','components/toast')->name('loginHelp');
+//Route::view('/testNotify','components/toast')->name('toastTest');
 
-Route::get('/newUser',[RegisterController::class, 'create'])->name('newUser');
-Route::post('/newUser/store', [RegisterController::class, 'store'])->name('newUserStore');
+Route::view('/newUser', 'pages.newUser')->name('newUser');
+Route::post('/newUser/store', [CreateNewUser::class, 'create'])->name('newUserStore');
+
+Route::view('/home', 'pages.')->name('home');
+Route::post('/loginAuth', [SessionController::class, 'login'])->name('loginAuth');
+
